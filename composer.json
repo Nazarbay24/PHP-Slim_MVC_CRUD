@@ -1,0 +1,16 @@
+{
+  "name": "nurbek/crud",
+  "description": "CRUD",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "app\\": "app/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "slim/slim": "4.*",
+    "slim/psr7": "^1.5",
+    "slim/php-view": "^3.1"
+  }
+}
