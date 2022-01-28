@@ -33,6 +33,7 @@ body {
   font-size: 18px;
   cursor: default;
   z-index: 2;
+  overflow: hidden;
 }
 #user_icon {
   background: rgba(255, 255, 255, 0.6);
