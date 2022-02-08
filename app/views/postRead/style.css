@@ -1,0 +1,256 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway";
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 110px 0 40px 0;
+}
+
+#user_info {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 25px;
+  left: 25px;
+  color: #fff;
+  font-size: 18px;
+  cursor: default;
+  z-index: 2;
+}
+#user_icon {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 100px;
+  padding: 8px;
+  margin-right: 15px;
+  cursor: pointer;
+  animation: myScale 2s cubic-bezier(0.8, 0, 0.2, 1) 1 forwards;
+}
+#user_info span {
+  opacity: 0;
+  animation: fadeLeft 2s cubic-bezier(0.8, 0, 0.2, 1) 1s 1 forwards;
+}
+#user_icon img {
+  width: 20px;
+  height: 18px;
+  opacity: 0.7;
+}
+
+#user_info:hover ~ #logout_btn {
+  top: 70px;
+  opacity: 1;
+}
+#logout_btn:hover {
+  top: 70px;
+  opacity: 1;
+}
+#logout_btn {
+  opacity: 0;
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  padding: 8px 30px;
+  cursor: pointer;
+  border-radius: 100px;
+  overflow: hidden;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+#post {
+  display: block;
+  position: relative;
+  padding: 60px 60px 20px 60px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 2px 0 18px rgba(0, 0, 0, 0.15);
+  width: 60%;
+  color: #fff;
+  animation: fadePosts 2s cubic-bezier(0.8, 0, 0.2, 1) 1 forwards;
+}
+#post:after {
+  position: absolute;
+  content: "";
+  bottom: -60px;
+  height: 60px;
+  width: 1px;
+}
+#post_img {
+  float: right;
+  width: 40%;
+  border-radius: 6px;
+  margin: 0 0 20px 30px;
+}
+#post_title {
+  font-size: 28px;
+  overflow: hidden;
+}
+
+.post_author {
+  width: 100%;
+  margin-top: 20px;
+  display: inline-flex;
+  justify-content: space-between;
+  color: rgb(0, 0, 0);
+}
+
+#back_btn {
+  display: block;
+  text-decoration: none;
+  position: absolute;
+  top: -55px;
+  left: 0;
+  font-size: 35px;
+  color: #fff;
+  overflow: hidden;
+}
+#back_btn div {
+  transform: translateX(200%);
+  animation: fadeRight 2s cubic-bezier(0.8, 0, 0.2, 1) 1s 1 forwards;
+}
+
+@keyframes myScale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes fadeLeft {
+  0% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeRight {
+  0% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeTop {
+  0% {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeBottom {
+  0% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadePosts {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes outTop {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+}
+@keyframes outBottom {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+}
+@keyframes outLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+}
+@keyframes outRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
+@keyframes outScale {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+@keyframes outIn {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
